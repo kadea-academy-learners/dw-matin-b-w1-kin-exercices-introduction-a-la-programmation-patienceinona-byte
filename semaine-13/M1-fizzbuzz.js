@@ -19,5 +19,18 @@ Pourquoi FizzBuzz est-il célèbre dans les entretiens d'embauche de développeu
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+const nombre =30;
+for(i = 1; i <= 30; i++){
+    if(i % 3 ===0 && i % 5 === 0){
+    console.log(`${i}:mathem bingo`);
+  }else if(i % 3 ===0){
+    console.log(`${i}:mathem`);
+  }else if(i % 5=== 0){
+    console.log(`${i}:bingo`);
+  }else{
+    console.log(i);
+  }
 
+}
+  
 
