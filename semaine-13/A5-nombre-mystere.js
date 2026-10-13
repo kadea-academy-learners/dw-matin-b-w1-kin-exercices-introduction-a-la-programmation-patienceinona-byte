@@ -21,5 +21,68 @@ Explique la « recherche dichotomique » et pourquoi 7 essais suffisent toujours
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+function prompt(question){
+    const fs =require('fs');
+    process.stdout.write(question);
+    let buffer = Buffer.alloc(1024);
+    let bytes =fs.readSync(0,buffer,0,1024);
+    return buffer.toString().trim();
+}
+const nombreMystere =Math.floor(Math. random()* 100) +1;
+const essaisMax =7;
+let essai =0;
+let trouve =false;
+let abandon =false;
+while(! trouve && ! abandon && essai < essaisMax){
+    const saisie = prompt(
+        `devine le nombre entre 1 et 100 (essai ${essai +1}/7${essaisMax})`
+    );
+    if(essai === null){
+        // le joueur a clique sur annuler
+        abandon =true
+    }else{
+        const proposition =Numbre(saisie);
+        if(saisie.trim()===""|| Numbre.isNaN(proposition)){
+            // saisie invalide :l'essai n'est pas compte
+            console.log("ce n'est pas un nombre, reessaie !");
+        }else{
+            essais++;
+            if(proposition ===nombreMystere){
+                trouve = true;
+                console.log(`trouve en ${essais} essais !`);
+            }else if(proposition < nombreMystere){
+                if(essai === null){
+                    //joueur a clique sur annuler
+                    abandon= true;
+                }else{
+                    const proposition =Number(saisie);
+                    if(saisie.trim()===""|| Number.isNaN(proposition)){
+                        //saisie invalide :l'essai n'ets pas compte
+                        console.log("ce n'est pas un nombre,ressais !")
+                    }else{
+                        essai++
+                        if(proposition===nombreMystere){
+                            trouve = true;
+                            console.log(`trouve en ${essai}essais !`)
+                        }else if(proposition < nombreMystere){
+                            console.log("plus grand !");
+                        }else{
+                            console.log("plus petit")
+                        }
+                    }
+                }
+            }
+              
+            if(! trouve && ! abandon){
+                console.log(`perdu ! le nombre mystere etait ${nombreMystere}.`);
+            }
+            }
+
+            }
+        }
+    
+
+
+
 
 

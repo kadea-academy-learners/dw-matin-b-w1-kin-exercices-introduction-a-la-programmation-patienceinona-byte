@@ -21,5 +21,11 @@ Pourquoi typeof null renvoie-t-il 'object' alors que null n'est pas un objet ?
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+const prenom ="patience"
+let age =20;
+let commune="lemba";
+let estInscrit;
+let surnom;
+console.log(`j m'appelle ${ prenom} j'ai ${age} j'habite ${ commune} puis ${ typeof estInscrit}${typeof surnom} ${typeof pseudo}`);
 
 
