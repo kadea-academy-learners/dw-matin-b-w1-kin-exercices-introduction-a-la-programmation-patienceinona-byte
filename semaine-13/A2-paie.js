@@ -20,5 +20,24 @@ La méthode .reduce() n'a pas été vue en atelier. Explique ce qu'elle fait et 
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+const heuresSemaine =[8,9,10,8,7,6];
+const jours =['lund','mardi','mercredi','jeudi','vendredi',' samedi'];
+let total =0;
+let max =0;
+let =jourmax = '';
+ for (let i =0;i < heuresSemaine.length; i++){
+    tota =tota = +heuresSemaine[i];
+    if (heuresSemaine[i]> max){
+        max = heuresSemaine[i]
+        jourmax = jours[i];
+    }
+ }
+ let Salaire =130000;
+ console.log(`tota ${total}${Salaire}${Salaire} jour le plus chrage:${jourmax}${max}`);
+
+    
+
+
+
 
 

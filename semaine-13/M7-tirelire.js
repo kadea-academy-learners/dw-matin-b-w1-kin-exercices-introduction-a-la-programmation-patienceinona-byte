@@ -19,5 +19,16 @@ Cite tous les opérateurs d'affectation composée (+=, -=…) et donne un exempl
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+let total=0;
+for(let semaine =1;semaine <=12;semaine ++){
+    total +=2000;
+    if(semaine % 4===0){
+        console.log(`semaine ${semaine}:${total}fc(bouns !)`);
+    }else{
+        console.log(`semaine ${semaine}:${total}fc`);
+    }
+}
+console.log(`total apres 12 semaine :${total}fc`);
+
 
 

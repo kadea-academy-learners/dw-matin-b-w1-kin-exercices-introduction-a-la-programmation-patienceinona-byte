@@ -20,8 +20,16 @@ Mbote Lys ! puis 49.
 Recherche (à rédiger dans RECHERCHES.md) :
 Quand peut-on enlever les parenthèses autour des paramètres, et quand peut-on enlever return et les accolades ?
 `;
+
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+function saluerClassique(prenom) { return 'Mbote ' + prenom + ' !'; }
+
+const saluer = (prenom) => `Mbote ${prenom} !`;
+const carre = (n) => n * n;
+
+console.log(`${saluer('Lys')}`);
+console.log(`${carre(7)}`);
 
 

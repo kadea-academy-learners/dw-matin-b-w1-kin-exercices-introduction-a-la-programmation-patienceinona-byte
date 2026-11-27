@@ -37,13 +37,14 @@ Pourquoi var est-il banni du code moderne ? Cherche ce que sont la portée de fo
 
 // Mes prédictions (avant d'exécuter) :
 //
+const afficherScoreBug = score => Score : ${score || 'aucun'};
+const afficherScore = score => Score : ${score ?? 'aucun'};
 
-const ville = 'Kinshasa';
-if (true) {
-  const commune = 'Gombe';
-  console.log(ville);
-}
-console.log(commune);
+console.log(afficherScoreBug(15), afficherScoreBug(0), afficherScoreBug(undefined));
+console.log(afficherScore(15), afficherScore(0), afficherScore(undefined));
+
+const estConnecte = true;
+estConnecte && console.log('Bienvenue !');
 
 const afficher = () => {
   const secret = 'pondu';

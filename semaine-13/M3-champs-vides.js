@@ -19,5 +19,10 @@ Quelle est la liste complète des valeurs falsy en JavaScript ? (Indice : il y e
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+const estRempli = valeur => valeur ? 'rempli' : 'vide';
 
+// Mes prédictions avant de tester :
+// '' -> vide, 'Esther' -> rempli, 0 -> vide, 42 -> rempli, null -> vide,
+// undefined -> vide, NaN -> vide, ' ' -> rempli, '0' -> rempli, false -> vide
 
+console.log(estRempli(''), estRempli('Esther'), estRempli(0), estRempli(42), estRempli(null), estRempli(undefined), estRempli(NaN), estRempli(' '), estRempli('0'), estRempli(false));
