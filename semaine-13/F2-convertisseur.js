@@ -20,10 +20,21 @@ Qu'est-ce que NaN, et pourquoi NaN === NaN renvoie false ? Quelle fonction utili
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
-const saisie='2500';
-console.log(saisie+500);
-console.log(Number(saisie) +500);
-justifaction:parceque/ saisie /une /chaine /de /caracteres( String) /pas /un /nombre
+const saisie = '2500';
 
+// 1. Résultat faux : saisie est une chaîne, donc + colle les textes
+console.log(`${saisie + 500}`);
 
+// 2. Explication : saisie est un string, pas un nombre, donc '2500' + 500 donne '2500500'
+console.log(`${Number(saisie) + 500}`);
+
+// 3. Prédictions avant test, puis vérification
+// Prédiction Number('') = 0
+console.log(`${Number('')}`);
+// Prédiction Number('abc') = NaN
+console.log(`${Number('abc')}`);
+// Prédiction Number(' 42 ') = 42
+console.log(`${Number(' 42 ')}`);
+// Prédiction Number(true) = 1
+console.log(`${Number(true)}`);
 

@@ -20,24 +20,23 @@ Peut-on enchaîner plusieurs ternaires ? Pourquoi est-ce souvent déconseillé ?
 // ===== FIN ÉNONCÉ =====
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
-const age =16;
-if(age >=12){
-    console.log("tu es majeur")
-}
-else {
-    console.log("tu es mineur")
+const age = 16;
+
+// 1. Ternaire pour le statut
+const statut = age >= 18 ? 'majeur' : 'mineur';
+
+// 2. if / else if / else pour le tarif
+let tarif;
+if (age < 5) {
+  tarif = 'gratuit';
+} else if (age < 18) {
+  tarif = '500 FC';
+} else {
+  tarif = '1 000 FC';
 }
 
-if(age<5){
-    console.log('gratuit')
-}
-else if (age<16){
-    console.log(500);
-}
-else{
-    console.log(1000);
-}
-
+// 3. Une seule phrase
+console.log(`Statut : ${statut} — Tarif : ${tarif}`);
 
 
 
